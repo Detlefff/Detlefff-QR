@@ -1,34 +1,10 @@
 <?php
-/**
- *
- */
-class qr
+require_once 'scripts/script.php';
+
+class qr extends Script
 {
-    //This is holding our matches
-    private $matches;
-
-    function __construct($matches)
-    {
-        $this->matches = $matches;
-    }
-
-    public function returnType()
-    {
-        return 'image';
-    }
-
     public function run()
     {
-        return 'https://chart.googleapis.com/chart?chs=178x178&cht=qr&chl=' + urlencode($matches[0]);
-    }
-
-	public function help()
-	{
-		return 'qr <string-to-be-encoded> - Returns an image containing the QR-encoded string';
-	}
-
-    function __destruct()
-    {
-
+        return $this->send($this->message->number, 'https://chart.googleapis.com/chart?chs=547x547&cht=qr&chl=' . urlencode($this->matches[1]), 'image');
     }
 }

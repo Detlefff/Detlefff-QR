@@ -2,7 +2,7 @@
 
 This is the QR-Plugin for Detleff.
 
-It listens for `QR <qr-encoded-text>` and sends back the image containing the QR-Code.
+It listens for `QR <to-be-encoded-text>` and sends back the image containing the QR-Code.
 
 The regEx, that must be added to `config/regEx.php` is:
 
