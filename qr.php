@@ -1,6 +1,4 @@
 <?php
-require_once 'scripts/script.php';
-
 class qr extends Script
 {
     public function run()
