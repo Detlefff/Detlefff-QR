@@ -1,8 +1,8 @@
 <?php
 class qr extends Script
 {
-    protected $helpMessage = "'qr STRING'\n";
-    protected $description = 'Returns a QR-code representing the given string';
+    protected static $helpMessage = "'qr STRING'\n";
+    protected static $description = 'Returns a QR-code representing the given string';
 
     public function run()
     {
